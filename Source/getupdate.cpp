@@ -6,6 +6,7 @@ GetUpdate::GetUpdate(QWidget *parent) :
     ui(new Ui::GetUpdate)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
     BGU.getUpdate();
 

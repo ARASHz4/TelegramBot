@@ -29,6 +29,14 @@ void Bot::getUpdate()
     connect(reply, SIGNAL(finished()), this, SLOT (fileDownloaded()));
 }
 
+void Bot::getMe()
+{
+    reply = manager->get(QNetworkRequest(QUrl("https://api.telegram.org/bot" + SLSettings::Token() + "/getMe")));
+
+    connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(error(QNetworkReply::NetworkError)));
+    connect(reply, SIGNAL(finished()), this, SLOT (fileDownloaded()));
+}
+
 void Bot::error(QNetworkReply::NetworkError)
 {
     //DLE = reply->errorString();

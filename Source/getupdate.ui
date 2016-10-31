@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Get Update</string>
   </property>
   <widget class="QPlainTextEdit" name="plainTextEdit">
    <property name="geometry">

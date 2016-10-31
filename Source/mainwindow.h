@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButtonGetUpdate_clicked();
 
+    void on_pushButtonGetMe_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "sendmessage.h"
 #include "getupdate.h"
+#include "getme.h"
 #include "slsettings.h"
 
 #include <QDebug>
@@ -27,7 +28,12 @@ void MainWindow::on_pushButtonSendMessage_clicked()
 
 void MainWindow::on_pushButtonGetUpdate_clicked()
 {
-    qDebug()<<"arash";
     GetUpdate GUD(this);
     GUD.exec();
+}
+
+void MainWindow::on_pushButtonGetMe_clicked()
+{
+    GetMe GMD(this);
+    GMD.exec();
 }

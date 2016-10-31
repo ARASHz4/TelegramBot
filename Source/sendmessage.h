@@ -23,6 +23,7 @@ private slots:
 private:
     Ui::SendMessage *ui;
 
+    //BSM : Bot Seand Message
     Bot *BSM;
 };
 

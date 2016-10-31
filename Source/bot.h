@@ -33,6 +33,8 @@ public slots:
 
     void getUpdate();
 
+    void getMe();
+
 private slots:
     void error(QNetworkReply::NetworkError);
 
