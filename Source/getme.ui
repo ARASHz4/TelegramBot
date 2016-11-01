@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>309</width>
-    <height>417</height>
+    <width>441</width>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -136,7 +136,7 @@
      </property>
     </spacer>
    </item>
-   <item row="2" column="0">
+   <item row="2" column="0" colspan="3">
     <widget class="QPlainTextEdit" name="plainTextEdit"/>
    </item>
   </layout>

@@ -36,26 +36,17 @@ void GetMe::Download_Completed()
 
 void GetMe::readJson()
 {
-    QString val;
-    val = QString(BGM->downloadedData());
+    QString val = QString(BGM->downloadedData());
 
-    qWarning() << val;
-    /*QJsonDocument d = QJsonDocument::fromJson(val.toUtf8());
+    QJsonDocument d = QJsonDocument::fromJson(val.toUtf8());
     QJsonObject sett2 = d.object();
     QJsonValue value = sett2.value(QString("result"));
-    qWarning() << value;
+
     QJsonObject item = value.toObject();
-    qWarning() << tr("QJsonObject of description: ") << item;
 
-    //incase of string value get value and convert into string
-    qWarning() << tr("QJsonObject[appName] of description: ") << item["description"];
-    QJsonValue subobj = item["description"];
-    qWarning() << subobj.toString();
-
-    //incase of array get array and convert into string
-    qWarning() << tr("QJsonObject[appName] of value: ") << item["imp"];
-    QJsonArray test = item["imp"].toArray();
-    qWarning() << test[1].toString();*/
+    ui->botNameLabel->setText(item["first_name"].toString());
+    ui->botUserNameLabel->setText(item["username"].toString());
+    ui->botIDLabel->setText(QString::number(item["id"].toInt()));
 }
 
 void GetMe::on_okPushButton_clicked()
