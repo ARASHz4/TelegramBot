@@ -1,5 +1,13 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/Icon">
+        <file>Icons/About.png</file>
+        <file>Icons/Exit.png</file>
+        <file>Icons/HomePage.png</file>
+        <file>Icons/language.png</file>
+        <file>Icons/Qt.png</file>
         <file>Icons/Small Icon.png</file>
+        <file>Icons/Big Icon.png</file>
+        <file>Icons/Options.png</file>
     </qresource>
+    <qresource prefix="/Language"/>
 </RCC>

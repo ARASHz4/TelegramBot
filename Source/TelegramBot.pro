@@ -11,6 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = "Telegram Bot"
 TEMPLATE = app
 
+CONFIG += c++11
+
 win32
 {
     RC_FILE = Windows/TBWinRes.rc
@@ -24,24 +26,29 @@ mac
 }
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     sendmessage.cpp \
     bot.cpp \
-    getupdate.cpp \
     slsettings.cpp \
-    getme.cpp
+    getme.cpp \
+    options.cpp \
+    botwindow.cpp \
+    about.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     sendmessage.h \
     bot.h \
-    getupdate.h \
     slsettings.h \
-    getme.h
+    getme.h \
+    options.h \
+    botwindow.h \
+    about.h
 
-FORMS    += mainwindow.ui \
+FORMS    += \
     sendmessage.ui \
-    getupdate.ui \
-    getme.ui
+    getme.ui \
+    options.ui \
+    botwindow.ui \
+    about.ui
 
 RESOURCES += \
     resource.qrc

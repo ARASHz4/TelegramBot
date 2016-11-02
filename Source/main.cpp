@@ -1,4 +1,6 @@
-#include "mainwindow.h"
+#include "botwindow.h"
+#include "slsettings.h"
+
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -10,7 +12,9 @@ int main(int argc, char *argv[])
     TelegramBot.setApplicationVersion("1.0.0 Alpha");
     TelegramBot.setOrganizationDomain("arashz4.com");
 
-    MainWindow w;
+    SLSettings::LoadSettings();
+
+    BotWindow w;
     w.show();
 
     return TelegramBot.exec();
